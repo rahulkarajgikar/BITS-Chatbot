@@ -12,11 +12,15 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import io.kommunicate.Kommunicate;
+
 public class MainActivity extends AppCompatActivity {
 
+    private final String app_id="1b178d448c0704622a7dba0600b69f38c";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Kommunicate.init(this,app_id);
         setContentView(R.layout.activity_main);
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
